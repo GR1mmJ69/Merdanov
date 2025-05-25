@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrimmJ69</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<script>
+    // Создаём анимированные звёзды
+    document.addEventListener('DOMContentLoaded', function() {
+        const starsBg = document.createElement('div');
+        starsBg.className = 'stars-bg';
+        
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Рандомные параметры для звёзд
+            const size = Math.random() * 3;
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            const duration = 2 + Math.random() * 5;
+            
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.left = `${posX}%`;
+            star.style.top = `${posY}%`;
+            star.style.setProperty('--duration', `${duration}s`);
+            
+            starsBg.appendChild(star);
+        }
+        
+        document.body.appendChild(starsBg);
+    });
+</script>
+<body>
+    <div class="parallax">
+        <div class="stars"></div>
+        <div class="sun" id="sun"></div>
+    </div>
+
+    <header class="cosmic-header">
+        <h1>СОЛНЕЧНАЯ <span>СИСТЕМА</span></h1>
+        <p>Добро пожаловать в пустоту космоса</p>
+        <div class="scroll-down">▼</div>
+    </header>
+
+    <main class="cosmic-main">
+        <section class="planet-section" id="mercury">
+            <div class="planet-info">
+                <h2>МЕРКУРИЙ</h2>
+                <div class="planet-facts">
+                    <p>Ты чё за раскалённая глыба</p>
+                    <p>Температура: до 427°C(Как у вас в туалете, после острых крылышек KFC)</p>
+                    <p>Год: (14)88 земных дней</p>
+                </div>
+            </div>
+            <div class= "content">
+                    <img src="img/mercury-img.png" alt="Фото МЕРКУРИЙ">
+        </section>
+
+        <!-- Аналогичные секции для других планет -->
+        <section class="planet-section" id="venus">
+            <div class="planet-info">
+                <h2>ВЕНЕРА</h2>
+                <div class="planet-facts">
+                    <p>Адская кислотная баня (Пубертатная язва)</p>
+                    <p>Температура: 462°C(для куры-гриль самое то)</p>
+                    <p>Атмосфера: CO₂ с серной кислотой(После бати в туалете, противогаз взял?)</p>
+                </div>
+            </div>
+            <div class= "content">
+                    <img src="img/venus-img.png" alt="Фото Венеры">
+        </section>
+
+        <section class="planet-section" id="earth">
+            <div class="planet-info">
+                <h2>ЗЕМЛЯ</h2>
+                <div class="planet-facts">
+                    <p>Единственное место, где есть пиво</p>
+                    <p>На фото батя проиграл в танки</p>
+                    <p>Температура: в норме 15°C</p>
+                    <p>Спутник: Луна (Что сыр, забыл в космосе?)</p>
+                </div>
+            </div>
+           <div class= "content">
+                    <img src="img/earth-img.png" alt="Фото Земли">
+                 </div>
+        </section>
+        <section class="planet-section" id="Mars">
+            <div class="planet-info">
+                <h2>МАРС</h2>
+                <div class="planet-facts">
+                    <p>скебоб?: Красная пылевая пустыня..</p>
+                    <p>Температура: От -153°C до +20°C (Как Апрель в Москве).</p>
+                    <p>Есть лёд (но не для коктейлей).</p>
+                </div>
+                 <div class= "content">
+                    <img src="img/mars-img.png" alt="Фото марса">
+                 </div>
+          </section>
+        <section class="planet-section" id="Jupiter">
+            <div class="planet-info">
+                <h2>Юпитер </h2>
+                <div class="planet-facts">
+                    <p> Газовый гигант, клянись (в 11 раз больше Земли)<p>
+                    <p>Температура: -145°C (Типичная Сибирь в НГ).</p>
+                    <p>79 спутников (Ганимед — крупнее Меркурия).</p>
+                </div>
+                 <div class= "content">
+                    <img src="img/jupiter-img.png"Фото Юпитер">
+                 </div>
+        <section class="planet-section" id="Saturn">
+            <div class="planet-info">
+                <h2>Сатурн </h2>
+                <div class="planet-facts">
+                    <p>Чё за покемон?: Газовый гигант с кольцами.<p>
+                    <p>Температура: -178°C (Сибрь в Антарктиде?).</p>
+                    <p>Лёгкий, как пенопласт (если б была ванна — плавал бы).</p>
+                </div>
+                 <div class= "content">
+                    <img src="img/saturn-img.png"Фото Сатурна">
+                 </div>
+    </main>
+    <footer class="cosmic-footer">
+        <p>© 2025 Космический пипец| Сделано с ненавистью к гравитации</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
